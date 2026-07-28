@@ -1,5 +1,5 @@
 name: SquidImprovements
-version: '1.0.0.0'
+version: '${version}'
 main: io.github.derexxd.squidImprovements.SquidImprovements
 api-version: '1.18'
 prefix: DerexXD
