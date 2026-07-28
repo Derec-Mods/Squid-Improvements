@@ -13,12 +13,17 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public final class SquidDamageListener implements Listener {
 
+    private static final double INK_RANGE = 5.0;
+
     @EventHandler(ignoreCancelled = true)
     public void onEntityDamageByEntity(EntityDamageByEntityEvent event) {
         if (!(event.getDamager() instanceof Player player)) {
             return;
         }
         if (!(event.getEntity() instanceof Squid squid)) {
+            return;
+        }
+        if (player.getLocation().distanceSquared(squid.getLocation()) > INK_RANGE * INK_RANGE) {
             return;
         }
 
