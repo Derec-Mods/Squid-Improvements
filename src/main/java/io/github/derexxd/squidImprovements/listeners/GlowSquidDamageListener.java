@@ -3,7 +3,6 @@ package io.github.derexxd.squidImprovements.listeners;
 import org.bukkit.Particle;
 import org.bukkit.entity.GlowSquid;
 import org.bukkit.entity.Player;
-import org.bukkit.entity.Squid;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -12,25 +11,25 @@ import org.bukkit.potion.PotionEffectType;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public final class SquidDamageListener implements Listener {
+public final class GlowSquidDamageListener implements Listener {
 
-    private static final double INK_RANGE = 5.0;
+    private static final double GLOW_RANGE = 5.0;
 
     @EventHandler(ignoreCancelled = true)
     public void onEntityDamageByEntity(EntityDamageByEntityEvent event) {
         if (!(event.getDamager() instanceof Player player)) {
             return;
         }
-        if (!(event.getEntity() instanceof Squid squid) || squid instanceof GlowSquid) {
+        if (!(event.getEntity() instanceof GlowSquid glowSquid)) {
             return;
         }
-        if (player.getLocation().distanceSquared(squid.getLocation()) > INK_RANGE * INK_RANGE) {
+        if (player.getLocation().distanceSquared(glowSquid.getLocation()) > GLOW_RANGE * GLOW_RANGE) {
             return;
         }
 
-        squid.getWorld().spawnParticle(
-                Particle.SQUID_INK,
-                squid.getLocation(),
+        glowSquid.getWorld().spawnParticle(
+                Particle.END_ROD,
+                glowSquid.getLocation(),
                 24,
                 0.4,
                 0.4,
@@ -39,7 +38,7 @@ public final class SquidDamageListener implements Listener {
         );
 
         player.addPotionEffect(new PotionEffect(
-                PotionEffectType.BLINDNESS,
+                PotionEffectType.GLOWING,
                 ThreadLocalRandom.current().nextInt(40, 61),
                 0
         ));
