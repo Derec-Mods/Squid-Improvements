@@ -39,7 +39,7 @@ public final class GlowSquidDamageListener implements Listener {
 
         player.addPotionEffect(new PotionEffect(
                 PotionEffectType.GLOWING,
-                ThreadLocalRandom.current().nextInt(40, 61),
+                ThreadLocalRandom.current().nextInt(150, 300),
                 0
         ));
     }
