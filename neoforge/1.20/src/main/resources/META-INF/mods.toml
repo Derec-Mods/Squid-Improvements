@@ -1,0 +1,25 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+license = "All Rights Reserved"
+
+[[mods]]
+modId = "squidimprovements"
+version = "1.0.0.3"
+displayName = "Squid Improvements"
+displayURL = "https://www.derekchen.dev/"
+authors = "DerexXD"
+description = '''Squids and Glow Squids get quality of life, vanilla friendly upgrades!'''
+
+[[dependencies.squidimprovements]]
+modId = "forge"
+mandatory = true
+versionRange = "[47.1.106,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.squidimprovements]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.1,1.20.2)"
+ordering = "NONE"
+side = "BOTH"
