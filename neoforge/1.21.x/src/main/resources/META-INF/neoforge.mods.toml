@@ -1,0 +1,24 @@
+modLoader="javafml"
+loaderVersion="[2,)"
+license="MIT"
+
+[[mods]]
+modId="squidimprovements"
+version="${file.jarVersion}"
+displayName="Squid Improvements"
+authors="DerexXD"
+description="Squids and Glow Squids get quality of life, vanilla friendly upgrades!"
+
+[[dependencies.squidimprovements]]
+modId="neoforge"
+type="required"
+versionRange="[21.1,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.squidimprovements]]
+modId="minecraft"
+type="required"
+versionRange="[1.21,)"
+ordering="NONE"
+side="BOTH"

@@ -1,28 +1,24 @@
 {
   "schemaVersion": 1,
-  "id": "fasterhappyghast",
+  "id": "squidimprovements",
   "version": "${version}",
-  "name": "FasterHappyGhast",
-  "description": "Make happy ghasts zoom! Configurable speed",
+  "name": "Squid Improvements",
+  "description": "Squids and Glow Squids get quality of life, vanilla friendly upgrades!",
   "authors": [
     "DerexXD"
   ],
   "contact": {
-    "homepage": "https://derec4.github.io/derexsmp/",
-    "issues": "https://github.com/Derec-Mods/FasterHappyGhast/issues"
+    "homepage": "https://www.derekchen.dev/"
   },
   "license": "MIT",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.github.derexxd.fasterhappyghast.FasterHappyGhast"
+      "io.github.derexxd.squidimprovements.SquidImprovements"
     ]
   },
-  "mixins": [
-    "fasterhappyghast.mixins.json"
-  ],
   "depends": {
-    "fabricloader": ">=0.15.11",
-    "minecraft": ">=1.21.6 <1.22"
+    "fabricloader": ">=0.14.0",
+    "minecraft": "*"
   }
 }
